@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/src/css/styles.css">
+    <style>
+        /* Simple dashboard grid CSS */
+
+/* Assign grid instructions to our parent grid container */
+.grid-container {
+  display: grid;
+  grid-template-columns: 15rem 1fr;
+  grid-template-rows: 3.25rem 1fr 3rem;
+  grid-template-areas:
+    "sidenav header"
+    "sidenav main"
+    "sidenav footer";
+  height: 100vh;
+}
+
+/* Give every child element its grid name */
+.header {
+  grid-area: header;
+}
+
+.sidenav {
+  grid-area: sidenav;
+}
+
+.main {
+  grid-area: main;
+}
+
+.footer {
+  grid-area: footer;
+}
+    </style>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+</head>
+<body>
+<div class="grid-container">
+  <header class="header bg-green-500 shadow-lg"></header>
+  <aside class="sidenav bg-blue-gray-900"></aside>
+  <main class="main"></main>
+  <footer class="footer bg-blue-gray-50">
+      Mach B Technologies Inc. © <span id="footer-year"></span> - <span>Edugence</span> | <span>This website works best with <a href="https://www.google.com/chrome/" target="_blank">Google Chrome</a></span>
+      <script>
+          document.getElementById("footer-year").innerHTML = (new Date()).getFullYear();;
+      </script>
+  </footer>
+</div>
+</body>
+</html>

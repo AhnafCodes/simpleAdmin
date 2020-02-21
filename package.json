@@ -1,0 +1,42 @@
+{
+  "name": "Admin with Tailwind",
+  "version": "0.0.1",
+  "description": "Basic Admin using developed using SAltEnv with Tailwind CSS- Simple Alternative Environment, a minimal setup for web development using web components, heresy ,sass and snowpack(simple and frameless and no transpilation and no bundling and yes ES modules)",
+  "scripts": {
+    "start": "es-dev-server --watch --open --host 127.0.0.1 --port 9000",
+    "postinstall": "npx snowpack",
+    "lint": "eslint \"src/**/*.{js}\" --quiet",
+    "format": "prettier --write \"src/**/*.{js,scss,html}\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass src -o src  -iw",
+    "build-tailwind": "postcss src/css/tailwind.css -o src/css/styles.css"
+  },
+  "keywords": [
+    "webcomponents",
+    "snowpack",
+    "heresy",
+    "frameless"
+  ],
+  "author": "Ashraf Mohammad",
+  "license": "ISC",
+  "dependencies": {
+    "@ungap/custom-elements-new": "^0.1.4",
+    "classnames-es": "^2.2.6",
+    "heresy": "^0.24.4",
+    "npm": "^6.13.7"
+  },
+  "devDependencies": {
+    "snowpack": "^1.2.0",
+    "eslint": "^6.8.0",
+    "tailwindcss": "^1.2.0",
+    "autoprefixer": "^9.7.4",
+    "postcss": "^7.0.27",
+    "purgecss": "^2.0.6",
+    "postcss-cli": "^7.1.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-import": "^2.20.1",
+    "node-sass": "^4.13.1",
+    "prettier": "^1.19.1",
+    "es-dev-server": "^1.40.0"
+  }
+}
