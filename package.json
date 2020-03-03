@@ -1,5 +1,5 @@
 {
-  "name": "Admin with Tailwind",
+  "name": "AdminThemeTailwind",
   "version": "0.0.1",
   "description": "Basic Admin using developed using SAltEnv with Tailwind CSS- Simple Alternative Environment, a minimal setup for web development using web components, heresy ,sass and snowpack(simple and frameless and no transpilation and no bundling and yes ES modules)",
   "scripts": {
