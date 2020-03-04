@@ -32,8 +32,8 @@ document.getElementById("main-menu").addEventListener("click", (e) => {
     const path = (new URL(e.target.href)).pathname
     if(routePaths.indexOf((new URL(e.target.href)).pathname != -1)){
        e.preventDefault();
-       const state = { 'page_id': 1, 'user_id': 5 }
-       const title = ''
+       const { title=''  } = e.target;
+       const state = { 'page_id': 1, 'user_id': 5 };
        history.pushState(state, title, path)
     }
 });

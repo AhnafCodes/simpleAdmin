@@ -58,17 +58,42 @@
   width: 1px;
   height: 1px;
 }
+.collapsed #main-menu  .menu-heading:hover,
+.collapsed #main-menu  .menu-item:hover{
+   position: relative;
+}
 .collapsed #main-menu  .menu-heading:hover .text,
 .collapsed #main-menu  .menu-item:hover .text{
+  white-space: nowrap;
   position: absolute;
-  left: 2rem;
-  float:left;
-  width:1px;
-  color: black;
+  height: 2rem;
+  left: 3rem;
+  border-radius: 0 5px 5px 0;
+  padding: 0 25px 0 15px;
   background: gray;
-  opacity: 50%;
-}
+  border: 1px solid black;
+  border-left-width: 0px;
 
+  color: white;
+  line-height: 1.5rem;
+  width: 7rem;
+  opacity: 0.5;
+}
+.collapsed #main-menu  .menu-heading:hover .text::before,
+.collapsed #main-menu  .menu-item:hover .text::before {
+    position: absolute;
+    content: "";
+    line-height: 0;
+    text-indent: 12px;
+    left: -13px;
+    width: 1px;
+    height: 0;
+    margin-right: -4px;
+    border-right: 13px solid gray;
+    border-top: 13px solid transparent;
+    border-bottom: 13px solid transparent;
+    opacity: 0.5;
+}
 .footer {
   grid-area: footer;
 }
@@ -92,13 +117,13 @@
 
     </div>
     <nav id="main-menu" aria-labelledby="menu-menu-label" tabindex="-1" aria-expanded="true">
-        <h2 class="text-blue-gray-50 h-10 align-bottom menu-heading">
+        <h2 class="text-blue-gray-50 h-8 items-center menu-heading hover:border-l-4 hover:border-green-500">
             <span class="mdi mdi-book-open-variant mdi-24px h-6 inline-block ml-2 mt-2 mr-3"></span>
-            <span class="h-6 inline-block text">Curriculum</span></h2>
+            <span class="h-6 text">Curriculum</span></h2>
         <ul>
-            <li><a href="/manage-user" class="menu-item text-blue-gray-50 ">
+            <li><a href="/manage-user" class="menu-item text-blue-gray-50 hover:border-l-4 hover:border-green-500">
                 <span class="mdi mdi-account-group mdi-24px h-6 inline-block ml-2 mt-2 mr-3"></span>
-                <span class="text">Manage</span>
+                <span class="h-6  text">Manage User</span>
             </a></li>
             <li><a href=""></a></li>
             <li><a href=""></a></li>
