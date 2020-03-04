@@ -44,7 +44,7 @@
   grid-area: sidenav;
   transition: width 2s;
 }
-.grid-container.collapsed-sidenav {
+.grid-container.collapsed {
    grid-template-columns: 4rem 1fr;
 }
 .main {
@@ -76,7 +76,7 @@
     <nav id="main-menu" aria-labelledby="menu-menu-label" tabindex="-1" aria-expanded="true">
         <h2 class="text-blue-gray-50 h-10 align-bottom">
             <span class="mdi mdi-book-open-variant mdi-24px h-6 inline-block ml-2 mt-2 mr-3"></span>
-            <span class="h-6 inline-block">Curriculum</span></h2>
+            <span class="h-6 inline-block collapsed:sr-only">Curriculum</span></h2>
         <ul>
             <li><a href="/manage-user">Manage</a></li>
             <li><a href=""></a></li>

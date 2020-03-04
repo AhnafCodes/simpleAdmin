@@ -2,7 +2,7 @@ import { addExpandCollapseBehavior } from "./js-utils.js";
 import UniversalRouter from '/web_modules/universal-router.js'
 
 addExpandCollapseBehavior(document.getElementById("main-menu-button"),  {
-    ".grid-container": ["collapsed-sidenav"]
+    ".grid-container": ["collapsed"]
 });
 
 
