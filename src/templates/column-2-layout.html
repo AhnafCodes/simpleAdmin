@@ -50,6 +50,24 @@
 .main {
   grid-area: main;
 }
+.collapsed #main-menu .menu-heading .text,
+.collapsed #main-menu .menu-item .text{
+  position: absolute;
+  left: -999rem;
+  float: left;
+  width: 1px;
+  height: 1px;
+}
+.collapsed #main-menu  .menu-heading:hover .text,
+.collapsed #main-menu  .menu-item:hover .text{
+  position: absolute;
+  left: 2rem;
+  float:left;
+  width:1px;
+  color: black;
+  background: gray;
+  opacity: 50%;
+}
 
 .footer {
   grid-area: footer;
@@ -74,11 +92,14 @@
 
     </div>
     <nav id="main-menu" aria-labelledby="menu-menu-label" tabindex="-1" aria-expanded="true">
-        <h2 class="text-blue-gray-50 h-10 align-bottom">
+        <h2 class="text-blue-gray-50 h-10 align-bottom menu-heading">
             <span class="mdi mdi-book-open-variant mdi-24px h-6 inline-block ml-2 mt-2 mr-3"></span>
-            <span class="h-6 inline-block collapsed:sr-only">Curriculum</span></h2>
+            <span class="h-6 inline-block text">Curriculum</span></h2>
         <ul>
-            <li><a href="/manage-user">Manage</a></li>
+            <li><a href="/manage-user" class="menu-item text-blue-gray-50 ">
+                <span class="mdi mdi-account-group mdi-24px h-6 inline-block ml-2 mt-2 mr-3"></span>
+                <span class="text">Manage</span>
+            </a></li>
             <li><a href=""></a></li>
             <li><a href=""></a></li>
         </ul>
