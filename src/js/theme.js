@@ -1,5 +1,5 @@
 import { addExpandCollapseBehavior } from "./js-utils.js";
-import UniversalRouter from '/web_modules/universal-router.js'
+
 
 addExpandCollapseBehavior(document.getElementById("main-menu-button"),  {
     ".grid-container": ["collapsed"]
@@ -23,7 +23,6 @@ const routes = [
   }
 ];
 const routePaths = routes.map(route => route.path)
-const router = new UniversalRouter(routes); 
 
 document.getElementById("main-menu").addEventListener("click", (e) => {
     if(!e.target.href) {
@@ -38,7 +37,3 @@ document.getElementById("main-menu").addEventListener("click", (e) => {
     }
 });
 
-
-// router.resolve('/manage-user').then(html => {
-//   document.getElementsByTagName('main')[0].html = html // renders: <h1>Posts</h1>
-// })
