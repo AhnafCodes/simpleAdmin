@@ -25,8 +25,7 @@
     "classnames-es": "^2.2.6",
     "heresy": "^0.24.4",
     "material-components-web": "^5.0.0",
-    "npm": "^6.13.7",
-    "universal-router": "^9.0.0"
+    "npm": "^6.13.7"
   },
   "devDependencies": {
     "snowpack": "^1.2.0",
